@@ -1,0 +1,12 @@
+# Python / Virtualenv
+__pycache__/
+*.pyc
+.venv/
+.pytest_cache/
+
+# Data artefacts
+data/raw/
+data/processed/*.csv
+
+# Jupyter
+.ipynb_checkpoints/
