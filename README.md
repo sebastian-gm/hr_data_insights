@@ -61,6 +61,10 @@ The insights below are calculated from the cleaned dataset at `data/processed/Cl
 - **Remote talent represents 24.9%** of active staff but is evenly distributed across the top corporate functions (Accounting, HR, Product Management, Engineering each show ~25–26% remote share).
 - The homogeneous remote adoption rate suggests policy standardisation is feasible. Departments that remain heavily HQ-based (e.g., Services, Training) could pilot hybrid support models without disrupting overall coverage.
 
+### Visual Gallery (Optional)
+- Run `python scripts/create_visuals.py` to render the bar and pie charts that correspond to the insights above.  
+- PNG files (age composition, department headcount, attrition leaders, location split) will be written to `docs/visualizations/` and can be embedded in slide decks or refreshed quarterly.
+
 ## Recommendations
 1. **Strengthen the Talent Pipeline**  
    - Restart graduate and early-career programs to rebalance the age/tenure pyramid; set FY targets to restore 18–24 representation above 15%.  
@@ -86,4 +90,5 @@ The insights below are calculated from the cleaned dataset at `data/processed/Cl
   - `sql/02_hr_analytics_views.sql` publishes BI-ready views (`vw_hr_gender_breakdown`, `vw_hr_department_turnover`, etc.).
 - **Notebook Walkthrough**: `hr_cleaning.ipynb` demonstrates how to execute the pipeline, inspect validation warnings, and preview analytics tables interactively.
 - **Power BI Dashboard**: Refresh `hr_dashboard.pbix` against the processed CSV or SQL views to visualise the KPIs cited above. A static export is available in `dashboard.pdf`.
+- **Static Visuals**: Execute `python scripts/create_visuals.py` to generate PNG charts stored under `docs/visualizations/`.
 - **Testing**: Run `pytest` to validate critical cleaning functions before promoting updates.
